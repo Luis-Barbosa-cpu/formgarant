@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário Padrão de Garantia</title>
+    <link rel="stylesheet" href="../Form Padrão Garantia/styles/style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>Formulário Padrão de Garantia</h1>
+    
+    <form id="garantiaForm">
+        
+        <fieldset>
+            <legend>Dados da Concessionária</legend>
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Concessionária - Cidade</label>
+                    <input type="text" name="concessionaria_cidade" required>
+                </div>
+                <div class="form-group">
+                    <label>Tipo do Documento</label>
+                    <select name="tipo_documento">
+                        <option value="">Selecione...</option>
+                        <option value="OS">Ordem de Serviço (OS)</option>
+                        <option value="Outro">Outro</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Nome – Função</label>
+                    <input type="text" name="nome_funcao">
+                </div>
+                <div class="form-group">
+                    <label>Data de abertura da SS</label>
+                    <input type="date" name="data_abertura_ss">
+                </div>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Dados do Cliente</legend>
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Cliente</label>
+                    <input type="text" name="cliente_nome" required>
+                </div>
+                <div class="form-group">
+                    <label>Frota total (Veículos)</label>
+                    <input type="number" name="frota_total">
+                </div>
+                <div class="form-group">
+                    <label>Frota Volvo (Veículos)</label>
+                    <input type="number" name="frota_volvo">
+                </div>
+                <div class="form-group">
+                    <label>Segmentação do Cliente</label>
+                    <select name="segmentacao_cliente">
+                        <option value="">Selecione...</option>
+                        <option value="Varejo">Varejo</option>
+                        <option value="Frotista">Frotista</option>
+                    </select>
+                </div>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Dados do Veículo</legend>
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Modelo</label>
+                    <select name="modelo_veiculo">
+                        <option value="">Selecione...</option>
+                        <option value="FH">FH</option>
+                        <option value="FM">FM</option>
+                        <option value="VM">VM</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Chassis</label>
+                    <input type="text" name="chassis">
+                </div>
+                <div class="form-group">
+                    <label>Km/Horas</label>
+                    <input type="text" name="km_horas">
+                </div>
+                <div class="form-group">
+                    <label>D.E.T</label>
+                    <input type="date" name="det">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Idade (Meses)</label>
+                    <input type="number" name="idade_meses">
+                </div>
+                <div class="form-group">
+                    <label>Motor - Potência (cv)</label>
+                    <input type="text" name="motor_potencia">
+                </div>
+                <div class="form-group">
+                    <label>Caixa de Marchas – Modelo*</label>
+                    <input type="text" name="caixa_marchas">
+                </div>
+                <div class="form-group">
+                    <label>Eixo Traseiro – Modelo*</label>
+                    <input type="text" name="eixo_traseiro">
+                </div>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Dados da Operação</legend>
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Classe de Serviço</label>
+                    <input type="text" name="classe_servico">
+                </div>
+                <div class="form-group">
+                    <label>Aplicação</label>
+                    <select name="aplicacao">
+                        <option value="">Selecione...</option>
+                        <option value="Rodoviario">Rodoviário</option>
+                        <option value="Fora de Estrada">Fora de Estrada</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Implemento</label>
+                    <input type="text" name="implemento">
+                </div>
+                <div class="form-group">
+                    <label>Fator de Carga</label>
+                    <input type="text" name="fator_carga">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label>PBTC [T]</label>
+                    <input type="text" name="pbtc">
+                </div>
+                <div class="form-group">
+                    <label>Topografia</label>
+                    <input type="text" name="topografia">
+                </div>
+                <div class="form-group">
+                    <label>Bem Transportado</label>
+                    <input type="text" name="bem_transportado">
+                </div>
+                <div class="form-group">
+                    <label>Revisões em Dia (VSR)</label>
+                    <select name="revisoes_dia">
+                        <option value="">Selecione...</option>
+                        <option value="Sim">Sim</option>
+                        <option value="Nao">Não</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group" style="grid-column: 1 / -1;">
+                    <label>Rota do Veículo</label>
+                    <input type="text" name="rota_veiculo">
+                </div>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Descrição da Falha (RCC)</legend>
+            <div class="form-group">
+                <label>Reclamação</label>
+                <textarea name="reclamacao"></textarea>
+            </div>
+            <div class="form-group">
+                <label>Causa</label>
+                <textarea name="causa"></textarea>
+            </div>
+            <div class="form-group">
+                <label>Correção</label>
+                <textarea name="correcao"></textarea>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Código PN (Peça Causadora)</label>
+                    <input type="text" name="codigo_pn">
+                </div>
+                <div class="form-group">
+                    <label>Descrição (Peça Causadora)</label>
+                    <input type="text" name="descricao_peca">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Valor Reparo - Peças (R$)</label>
+                    <input type="number" step="0.01" name="valor_pecas">
+                </div>
+                <div class="form-group">
+                    <label>Valor Reparo - M. Obra (R$)</label>
+                    <input type="number" step="0.01" name="valor_mobra">
+                </div>
+                <div class="form-group">
+                    <label>Serviço Terceiros (R$)</label>
+                    <input type="number" step="0.01" name="valor_terceiros">
+                </div>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Tratativa</legend>
+            <h4>Comercial</h4>
+            <div class="form-row">
+                <div class="form-group">
+                    <label>% Cliente</label>
+                    <input type="number" name="comercial_pct_cliente">
+                </div>
+                <div class="form-group">
+                    <label>% Concessionária</label>
+                    <input type="number" name="comercial_pct_concessionaria">
+                </div>
+                <div class="form-group">
+                    <label>% Volvo do Brasil</label>
+                    <input type="number" name="comercial_pct_volvo">
+                </div>
+            </div>
+            <h4>Técnica</h4>
+            <div class="form-row">
+                <div class="form-group">
+                    <label>% Cliente</label>
+                    <input type="number" name="tecnica_pct_cliente">
+                </div>
+                <div class="form-group">
+                    <label>% Volvo do Brasil</label>
+                    <input type="number" name="tecnica_pct_volvo">
+                </div>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Comentários Adicionais</legend>
+            <div class="form-group">
+                <label>Insira comentários adicionais</label>
+                <textarea name="comentarios_adicionais"></textarea>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Fotos</legend>
+            <div class="file-upload-grid">
+                <div class="form-group">
+                    <label>Geral do Veículo</label>
+                    <input type="file" name="foto_geral_veiculo" accept="image/*">
+                    <input type="text" placeholder="Comentário sobre a foto" name="comentario_geral_veiculo">
+                </div>
+                <div class="form-group">
+                    <label>Geral do Implemento</label>
+                    <input type="file" name="foto_geral_implemento" accept="image/*">
+                    <input type="text" placeholder="Comentário sobre a foto" name="comentario_geral_implemento">
+                </div>
+                <div class="form-group">
+                    <label>Fotos da Falha 1</label>
+                    <input type="file" name="foto_falha_1" accept="image/*">
+                    <input type="text" placeholder="Comentário da falha" name="comentario_falha_1">
+                </div>
+                <div class="form-group">
+                    <label>Fotos da Falha 2</label>
+                    <input type="file" name="foto_falha_2" accept="image/*">
+                    <input type="text" placeholder="Comentário da falha" name="comentario_falha_2">
+                </div>
+            </div>
+        </fieldset>
+
+        <button type="submit">Enviar Formulário</button>
+    </form>
+</div>
+
+<script src="../Form Padrão Garantia/scripts/script.js"></script>
+
+</body>
+</html>
